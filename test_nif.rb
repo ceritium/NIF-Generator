@@ -17,7 +17,7 @@ class TestNif < Test::Unit::TestCase
 
   def test_get_default
     get '/'
-    assert_equal 'Hello world!', last_response.body
+    assert last_response.ok?
   end
   
   def test_get_with_only_number
@@ -27,12 +27,12 @@ class TestNif < Test::Unit::TestCase
   
   def test_get_with_correct_nif
     get '/32063227P'
-    assert_equal 'OK', last_response.body
+    assert_equal 'true', last_response.body
   end
   
   def test_get_with_wrong_nif
     get '/32063227P'
-    assert_equal 'KO', last_response.body
+    assert_equal 'false', last_response.body
   end
   
   def test_get_random

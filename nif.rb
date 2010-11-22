@@ -10,3 +10,8 @@ end
 get '/' do
   markdown :index
 end
+
+get '/:number' do
+  letter = "TRWAGMYFPDXBNJZSQVHLCKE"[params[:number].to_i % 23].chr
+  "#{letter}"
+end
