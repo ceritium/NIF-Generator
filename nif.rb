@@ -8,5 +8,5 @@ end
 
 
 get '/' do
-  'Hello world! sdds'
+  'Hello world!'
 end
