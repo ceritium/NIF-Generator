@@ -18,3 +18,6 @@ get %r{^\/(\d{8})$} do |code|
   "#{letter}"
 end
 
+not_found do
+  "false"
+end

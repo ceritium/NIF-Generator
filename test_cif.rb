@@ -101,9 +101,9 @@ end
 
 
 
-.
-Organismos autónomos estatales o no, y asimilados, y congregaciones e instituciones religiosas.
-Órganos de la Administración del Estado y Comunidades Autónomas.
-Uniones Temporales de Empresas.
-Otros tipos no definidos en el resto de claves.
-Reservado a establecimientos permanentes de entidades no residentes en territorio español.
+# .
+# Organismos autónomos estatales o no, y asimilados, y congregaciones e instituciones religiosas.
+# Órganos de la Administración del Estado y Comunidades Autónomas.
+# Uniones Temporales de Empresas.
+# Otros tipos no definidos en el resto de claves.
+# Reservado a establecimientos permanentes de entidades no residentes en territorio español.

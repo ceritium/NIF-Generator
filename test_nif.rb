@@ -27,12 +27,12 @@ class TestNif < Test::Unit::TestCase
 
   def test_llamar_a_un_numero_de_9_cifras
     get '/123456789'
-    assert !last_response.ok?
+    assert_equal 'false', last_response.body
   end
   
   def test_llamar_a_un_numero_de_7_cifras
     get '/1234567'
-    assert !last_response.ok?
+    assert_equal 'false', last_response.body
   end
   
   
