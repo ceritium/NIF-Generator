@@ -21,23 +21,27 @@ class TestNif < Test::Unit::TestCase
   end
   
   def test_get_with_only_number
-    get '/B9167417'
-    assert_equal '6', last_response.body
+    # get '/B9167417'
+    # assert_equal '6', last_response.body
+    pending 'only number'
   end
   
   def test_get_with_correct_cif
-    get '/B91674176'
-    assert_equal 'true', last_response.body
+    # get '/B91674176'
+    # assert_equal 'true', last_response.body
+    pending "correct cif"
   end
   
   def test_get_with_wrong_cif
-    get '/B91674178'
-    assert_equal 'false', last_response.body
+    # get '/B91674178'
+    # assert_equal 'false', last_response.body
+    pending "wrong cif"
   end
   
   def test_get_for_A
-    get '/A5881850'
-    assert_equal '1', last_response.body
+    # get '/A5881850'
+    # assert_equal '1', last_response.body
+    pending "A"
   end
 
   def test_get_for_B
