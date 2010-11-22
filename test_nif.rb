@@ -46,7 +46,11 @@ class TestNif < Test::Unit::TestCase
   end
   
   def test_get_random
-    pending 'debe devolver un nif valido al llamar a /random'
+    get '/random'
+    nif = last_response.body
+    code = nif[0..7]
+    letter = nif[8].chr
+    assert_equal letter, generate_letter_to_dni(code)
   end
     
   # def test_my_default

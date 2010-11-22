@@ -21,6 +21,12 @@ get %r{^\/(\d{8})([a-zA-Z])$} do |code, letter|
   (letter.upcase == generate_letter_to_dni(code)).to_s
 end
 
+get "/random" do
+  code = ''; 8.times{ code += rand(10).to_s};
+  "#{code}#{generate_letter_to_dni(code)}"
+end
+
+
 error 404 do
   status(200)
   'false'
