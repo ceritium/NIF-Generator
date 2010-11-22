@@ -2,6 +2,8 @@ require 'nif'
 require 'test/unit'
 require 'rack/test'
 require 'redgreen'
+require 'pending'
+
 class TestNif < Test::Unit::TestCase
   include Rack::Test::Methods
 
@@ -28,6 +30,11 @@ class TestNif < Test::Unit::TestCase
     get '/32063227P'
     assert_equal 'KO', last_response.body
   end
+  
+  def test_get_random
+    pending 'debe devolver un nif valido al llamar a /random'
+  end
+    
   # def test_my_default
   #   get '/'
   #   assert_equal 'Hello World!', last_response.body
