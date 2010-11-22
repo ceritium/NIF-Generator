@@ -8,5 +8,5 @@ end
 
 
 get '/' do
-  'Hello world!'
+  markdown :index
 end
