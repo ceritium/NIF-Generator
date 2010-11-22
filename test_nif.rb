@@ -20,19 +20,32 @@ class TestNif < Test::Unit::TestCase
     assert last_response.ok?
   end
   
-  def test_get_with_only_number
-    get '/32063227'
-    assert_equal 'P', last_response.body
+  def test_llamar_a_un_numero_de_8_cifras
+    get '/12345678'
+    assert_equal 'Z', last_response.body
+  end
+
+  def test_llamar_a_un_numero_de_9_cifras
+    get '/123456789'
+    assert !last_response.ok?
   end
   
+  def test_llamar_a_un_numero_de_7_cifras
+    get '/1234567'
+    assert !last_response.ok?
+  end
+  
+  
   def test_get_with_correct_nif
-    get '/32063227P'
-    assert_equal 'true', last_response.body
+    # get '/32063227P'
+    # assert_equal 'true', last_response.body
+    pending 'TODO'
   end
   
   def test_get_with_wrong_nif
-    get '/32063227P'
-    assert_equal 'false', last_response.body
+    # get '/32063227P'
+    # assert_equal 'false', last_response.body
+    pending 'TODO'
   end
   
   def test_get_random

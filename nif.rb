@@ -11,7 +11,10 @@ get '/' do
   markdown :index
 end
 
-get '/:number' do
-  letter = "TRWAGMYFPDXBNJZSQVHLCKE"[params[:number].to_i % 23].chr
+# Para un codigo del tipo 12345678
+get %r{^\/(\d{8})$} do |code|
+  p code
+  letter = "TRWAGMYFPDXBNJZSQVHLCKE"[code.to_i % 23].chr
   "#{letter}"
 end
+
