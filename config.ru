@@ -1,4 +1,4 @@
-require 'nif'
+require 'lib/app'
 
 run Sinatra::Application
 
