@@ -82,28 +82,26 @@ class TestNif < Test::Unit::TestCase
 
   def test_get_for_Q
     pending "debe devolver un cif válido para Organismos autónomos estatales o no, y asimilados, y congregaciones e instituciones religiosas."
+    # Q9155020B
   end    
 
   def test_get_for_S
     pending "debe devolver un cif válido para Órganos de la Administración del Estado y Comunidades Autónomas."
   end    
-  
+
+  def test_get_for_U
+    pending "debe devolver un cif válido para Uniones Temporales de Empresas."
+  end    
+
+  def test_get_for_V
+    pending "debe devolver un cif válido para Otros tipos no definidos en el resto de claves."
+  end    
+
+  def test_get_for_W
+    pending "debe devolver un cif válido para Reservado a establecimientos permanentes de entidades no residentes en territorio español."
+  end    
+
   def test_get_random
     pending 'debe devolver un cif valido al llamar a /random'
   end
 end
-
-
- 
-
-
-
-
-
-
-# .
-# Organismos autónomos estatales o no, y asimilados, y congregaciones e instituciones religiosas.
-# Órganos de la Administración del Estado y Comunidades Autónomas.
-# Uniones Temporales de Empresas.
-# Otros tipos no definidos en el resto de claves.
-# Reservado a establecimientos permanentes de entidades no residentes en territorio español.
