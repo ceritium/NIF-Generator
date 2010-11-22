@@ -6,22 +6,22 @@ Ejemplos de uso:
 
     # NIF aleatorio
     /random
-    # => 32063227P
+    # => 12345678Z
     
     # Letra del NIF
-    /32063227
-    # => P
+    /12345678
+    # => Z
     
     # Letra del NIF, en este caso el número es erróneo
-    /3206322
+    /1234567
     # => false
     
     # Verificar que un NIF es valido
-    /32063227P
+    /12345678Z
     # => true
     
     # Verificar que un NIF es valido, en este casi es erroneo
-    #/32063227Z
+    #/12345678Z
     # => false
     
     
