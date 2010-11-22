@@ -22,6 +22,7 @@ get %r{^\/(\d{8})([a-zA-Z])$} do |code, letter|
 end
 
 error 404 do
+  status(200)
   'false'
 end
 

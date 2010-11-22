@@ -43,7 +43,6 @@ class TestNif < Test::Unit::TestCase
   def test_get_with_wrong_nif
     get '/12345678W'
     assert_equal 'false', last_response.body
-    
   end
   
   def test_get_random
