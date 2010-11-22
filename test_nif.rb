@@ -4,6 +4,10 @@ require 'rack/test'
 require 'redgreen'
 require 'pending'
 
+
+set :environment, :test
+
+
 class TestNif < Test::Unit::TestCase
   include Rack::Test::Methods
 
