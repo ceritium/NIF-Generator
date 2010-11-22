@@ -35,17 +35,15 @@ class TestNif < Test::Unit::TestCase
     assert_equal 'false', last_response.body
   end
   
-  
   def test_get_with_correct_nif
-    # get '/32063227P'
-    # assert_equal 'true', last_response.body
-    pending 'TODO'
+    get '/12345678Z'
+    assert_equal 'true', last_response.body
   end
   
   def test_get_with_wrong_nif
-    # get '/32063227P'
-    # assert_equal 'false', last_response.body
-    pending 'TODO'
+    get '/12345678W'
+    assert_equal 'false', last_response.body
+    
   end
   
   def test_get_random

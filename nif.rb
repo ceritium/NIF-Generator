@@ -17,7 +17,7 @@ get %r{^\/(\d{8})$} do |code|
 end
 
 # Devuelve true o false a un dni con letra
-get %r{^\/(\d{8})([a-wA-W])$} do |code, letter|
+get %r{^\/(\d{8})([a-zA-Z])$} do |code, letter|
   (letter.upcase == generate_letter_to_dni(code)).to_s
 end
 
