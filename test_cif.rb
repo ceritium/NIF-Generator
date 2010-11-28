@@ -20,28 +20,19 @@ class TestNif < Test::Unit::TestCase
     assert last_response.ok?
   end
   
-  def test_get_with_only_number
-    # get '/B9167417'
-    # assert_equal '6', last_response.body
-    pending 'only number'
-  end
-  
   def test_get_with_correct_cif
-    # get '/B91674176'
-    # assert_equal 'true', last_response.body
-    pending "correct cif"
+    get '/B91674176'
+    assert_equal 'true', last_response.body
   end
   
   def test_get_with_wrong_cif
-    # get '/B91674178'
-    # assert_equal 'false', last_response.body
-    pending "wrong cif"
+    get '/B91674178'
+    assert_equal 'false', last_response.body
   end
   
   def test_get_for_A
-    # get '/A5881850'
-    # assert_equal '1', last_response.body
-    pending "A"
+    get '/A5881850'
+    assert_equal '1', last_response.body
   end
 
   def test_get_for_B
@@ -65,11 +56,13 @@ class TestNif < Test::Unit::TestCase
   end
   
   def test_get_for_F
-    pending "debe devolver un cif válido para Sociedades cooperativas."
+    get '/F-4107226'
+    assert_equal '5', last_response.body
   end
   
   def test_get_for_G
-    pending "debe devolver un cif válido para Asociaciones y otros tipos no definidos."
+    get '/G-7401165'
+    assert_equal '1', last_response.body
   end
 
   def test_get_for_H
@@ -86,11 +79,13 @@ class TestNif < Test::Unit::TestCase
 
   def test_get_for_Q
     pending "debe devolver un cif válido para Organismos autónomos estatales o no, y asimilados, y congregaciones e instituciones religiosas."
-    # Q9155020B
+    get '/Q9155020'
+    assert_equal 'B', last_response.body
   end    
 
   def test_get_for_S
-    pending "debe devolver un cif válido para Órganos de la Administración del Estado y Comunidades Autónomas."
+    get '/S2800568'
+    assert_equal 'D', last_response.body
   end    
 
   def test_get_for_U
