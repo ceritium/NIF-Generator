@@ -62,7 +62,7 @@ private
     d = c.to_s[-1].chr.to_i
     letters = ("A".."J").to_a
     case cif[0].chr
-      when /[ABEHFG]/ then (10 - d).to_s
+      when /[ABEHFGV]/ then (10 - d).to_s
       when /[KPQSFG]/ then letters[d+1]
       else return false
     end

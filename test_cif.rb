@@ -93,7 +93,8 @@ class TestNif < Test::Unit::TestCase
   end    
 
   def test_get_for_V
-    pending "debe devolver un cif válido para Otros tipos no definidos en el resto de claves."
+    get '/V9146054'
+    assert_equal '3', last_response.body
   end    
 
   def test_get_for_W
